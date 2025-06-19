@@ -1,36 +1,60 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 📝 Task Manager Dashboard
 
-## Getting Started
+A modern, responsive task management dashboard to organize and visualize tasks. Built with **Next.js**, **Tailwind CSS**, **Material UI (MUI)**, **Zustand**, and **TypeScript**.  
+This project uses local mock API routes and frontend-only state management—perfect for performance and fast prototyping.
 
-First, run the development server:
+---
+
+## 🚀 Getting Started
+
+Install dependencies:
 
 ```bash
+npm install
+# or
+yarn install
+# or
+pnpm install
+
+# Run the development server:
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open http://localhost:3000 with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+# To build for production:
+npm run build
+npm run start
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+# Features
+Add, update, delete tasks
+Organized by components, store, and API routes
+Responsive UI with Tailwind CSS
+Global state management using Zustand
+MUI for styled UI components
+TypeScript for static typing and maintainability
 
-## Learn More
+# Technologies Used
+Next.js – React framework for SSR & API routes
+Tailwind CSS – Utility-first CSS framework
+Material UI (MUI) – UI component library
+Zustand – Lightweight state manager
+TypeScript – Type-safe JavaScript
 
-To learn more about Next.js, take a look at the following resources:
+project-management-dashboard/
+├── components/         # UI components
+├── pages/              # Next.js pages and mock API
+│   ├── api/            # Local API routes (no DB)
+│   └── index.tsx       # Dashboard home
+├── store/              # Zustand store
+├── styles/             # Global styles
+├── public/             # Static assets (logo, icons)
+├── utils/              # Helper functions
+├── README.md
+└── package.json
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+# License
+This project is created solely for interview/assignment submission purposes.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+# Author
+Shivam Jaiswal
+Frontend Developer with 2.5+ years of experience building performant and scalable applications.
