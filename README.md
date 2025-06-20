@@ -41,16 +41,17 @@ Zustand – Lightweight state manager
 TypeScript – Type-safe JavaScript
 
 project-management-dashboard/
-├── components/         # UI components
-├── pages/              # Next.js pages and mock API
-│   ├── api/            # Local API routes (no DB)
-│   └── index.tsx       # Dashboard home
-├── store/              # Zustand store
-├── styles/             # Global styles
-├── public/             # Static assets (logo, icons)
-├── utils/              # Helper functions
+├── app/                # App Router folder
+│   ├── api/            # API route handlers
+│   └── page.tsx        # Main dashboard page
+├── components/         # Reusable UI components
+├── store/              # Zustand store for state management
+├── styles/             # Global styles (Tailwind CSS)
+├── public/             # Static files (logo, icons)
+├── utils/              # Auth and helper utilities
 ├── README.md
 └── package.json
+
 
 # License
 This project is created solely for interview/assignment submission purposes.

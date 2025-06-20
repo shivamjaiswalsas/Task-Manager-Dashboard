@@ -1,15 +1,22 @@
 "use client";
 import React from "react";
 import { Button, Card } from "@mui/material";
-import { ArrowForward } from "@mui/icons-material";
+import { ArrowForward, BuildCircleOutlined, RocketLaunchOutlined } from "@mui/icons-material";
+import SecurityIcon from "@mui/icons-material/Security";
+import HttpIcon from "@mui/icons-material/Http";
+import MemoryIcon from "@mui/icons-material/Memory";
+import PaletteIcon from "@mui/icons-material/Palette";
+import PhoneIphoneIcon from "@mui/icons-material/PhoneIphone";
+
 
 const features = [
-  "🔐 Token-Based Authentication",
-  "📡 CRUD API with Next.js Routes",
-  "🧠 State Management (Zustand/Redux Toolkit)",
-  "🎨 Tailwind + MUI UI Kit",
-  "📱 Fully Responsive Design",
+  { icon: <SecurityIcon fontSize="large" color="primary" />, label: "Token-Based Authentication" },
+  { icon: <HttpIcon fontSize="large" color="primary" />, label: "CRUD API with Next.js Routes" },
+  { icon: <MemoryIcon fontSize="large" color="primary" />, label: "State Management (Zustand/Redux Toolkit)" },
+  { icon: <PaletteIcon fontSize="large" color="primary" />, label: "Tailwind + MUI UI Kit" },
+  { icon: <PhoneIphoneIcon fontSize="large" color="primary" />, label: "Fully Responsive Design" },
 ];
+
 
 export default function LandingPage() {
   return (
@@ -38,23 +45,29 @@ export default function LandingPage() {
 
       {/* Features Section */}
       <section className="py-16 px-6 md:px-20 bg-white">
-        <h2 className="text-2xl md:text-3xl font-semibold text-center mb-12">
-          🚀 Key Features
-        </h2>
-        <div className="grid md:grid-cols-3 gap-6">
-          {features.map((feature, idx) => (
-            <Card key={idx} className="p-6 text-center shadow-md">
-              <p className="text-lg font-medium">{feature}</p>
-            </Card>
-          ))}
-        </div>
+       <h2 className="text-2xl md:text-3xl font-semibold text-center mb-12 flex items-center justify-center gap-2">
+  <RocketLaunchOutlined fontSize="large" color="primary" />
+  Key Features
+</h2>
+
+      <div className="grid md:grid-cols-3 gap-6">
+  {features.map((feature, idx) => (
+    <Card key={idx} className="p-6 text-center shadow-md flex flex-col items-center gap-4">
+      {feature.icon}
+      <p className="text-lg font-medium">{feature.label}</p>
+    </Card>
+  ))}
+</div>
+
       </section>
 
       {/* Tech Stack Section */}
       <section className="py-12 bg-blue-50 px-6 md:px-20">
-        <h3 className="text-xl md:text-2xl font-semibold text-center mb-8">
-          🛠 Tech Stack
-        </h3>
+       <h3 className="text-xl md:text-2xl font-semibold text-center mb-8 flex items-center justify-center gap-2">
+  <BuildCircleOutlined fontSize="medium" color="primary" />
+  Tech Stack
+</h3>
+
         <div className="flex flex-wrap justify-center gap-4 text-blue-800 font-semibold text-sm">
           <span className="bg-white px-4 py-2 rounded shadow">Next.js</span>
           <span className="bg-white px-4 py-2 rounded shadow">
